@@ -5,7 +5,7 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/cool guy/; botRegex4d = /^\/4th/; botRegexDL = /^\/rules/; 
+      botRegex = /^\/cool guy/; botRegex4d = /^\/4th/; botRegexDL = /^\/rules/; botRegexTw = /^\/twitch/i; 
  
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
@@ -20,6 +20,11 @@ function respond() {
   else if(request.text && botRegexDL.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://daddyleagues.com/mnl/rules");
+    this.res.end();
+  }
+  else if(request.text && botRegexTw.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://www.twitch.tv/"+request.text.substring(8,request.text.length));
     this.res.end();
   }
   else {
