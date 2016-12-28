@@ -32,12 +32,11 @@ function respond() {
     this.res.writeHead(200);
     postMessage("https://i.groupme.com/1440x1332.png.39bc8567cc554629b13d1507ae2c7087.large");
     this.res.end();
- 
+  }
   else if(request.text && botDuck.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://media3.giphy.com/media/YCseTHF2I6CCA/giphy.gif");
-    this.res.end();
-}  
+    this.res.end();  
   } 
   else if(request.text && botRegexProp.test(request.text)) {
     this.res.writeHead(200);
