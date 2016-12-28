@@ -6,7 +6,9 @@ var botID = process.env.BOT_ID;
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/cool guy/; botRegex4d = /^\/4th/; botRegexDL = /^\/rules/; botRegexTw = /^\/twitch/i; botRegexP = /^\/PDL/i;
- 
+  var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
+                ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
+                "MIA","BUF","SF","WAS","NYJ","TB"]
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage(cool());
@@ -33,6 +35,12 @@ function respond() {
     var rep = req.replace(/ /,"+");
     postMessage("http://daddyleagues.com/mnl/players?name="+rep+"&position=all&team=all");
     
+    this.res.end();
+  }
+  else if(request.text && botRegexSC.test(request.text)) {
+    this.res.writeHead(200);
+    
+    postMessage("http://daddyleagues.com/mnl/team/"+request.text.substring(5,8)+"/schedule");
     this.res.end();
   }
   else {
