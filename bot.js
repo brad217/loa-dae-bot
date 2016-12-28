@@ -6,7 +6,7 @@ var botID = process.env.BOT_ID;
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/cool guy/; botRegex4d = /^\/4th/; botRegexDL = /^\/rules/; botRegexTw = /^\/twitch/i; botRegexP = /^\/PDL/i;
-      botRegexSC = /^\/SDL/i; 
+      botRegexSC = /^\/SDL/i; botRegexDL = /^\/DDL/i;
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
@@ -44,6 +44,12 @@ function respond() {
     postMessage("http://daddyleagues.com/mnl/team/"+request.text.substring(5,8)+"/schedule");
     this.res.end();
   }
+   else if(request.text && botRegexDL.test(request.text)) {
+    this.res.writeHead(200);
+    //postMessage("http://www.daddyleagues.com/maddenrating?name=&position=all&team="+request.text.substring(5,8));
+    postMessage("http://daddyleagues.com/mnl/team/"+request.text.substring(5,8)+"/depthchart");
+    this.res.end();
+   }
   else {
     console.log("don't care");
     this.res.writeHead(200);
