@@ -17,7 +17,7 @@ function respond() {
     postMessage("https://i.groupme.com/1440x1332.png.39bc8567cc554629b13d1507ae2c7087.large");
     this.res.end();
   } 
-  elseif(request.text && botRegexDL.test(request.text)) {
+  else if(request.text && botRegexDL.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://daddyleagues.com/mnl/rules");
     this.res.end();
