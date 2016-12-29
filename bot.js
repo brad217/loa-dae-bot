@@ -5,7 +5,7 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/cool guy/; botRegexDa = /^\/dae/; botRegex4d = /^\/4th/;  
+      botRegex = /^\/cool guy/; botRegexDa = /^\/dae/; botRegex4d = /^\/4th/; botRegexDon = /^\/correct/; 
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
@@ -22,6 +22,11 @@ function respond() {
   else if(request.text && botRegexDL.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://amfl.freeforums.org/league-rules-t3.html");
+    this.res.end();
+  }
+  else if(request.text && botRegexDon.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://i.groupme.com/480x446.gif.296a09bc8154451580a2250f5e6968af");
     this.res.end();
   }
   else if(request.text && botRegexTw.test(request.text)) {
