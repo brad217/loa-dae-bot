@@ -29,31 +29,6 @@ function respond() {
     postMessage("https://media0.giphy.com/media/26tknCqiJrBQG6bxC/200_s.gif");
     this.res.end();
   }
-  else if(request.text && botRegexTw.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("http://www.twitch.tv/"+request.text.substring(8,request.text.length));
-    this.res.end();
-  }
-  else if(request.text && botRegexP.test(request.text)) {
-    this.res.writeHead(200);
-    var req = request.text.substring(5,request.text.length);
-    var rep = req.replace(/ /,"+");
-    postMessage("http://daddyleagues.com/mnl/players?name="+rep+"&position=all&team=all");
-    
-    this.res.end();
-  }
-  else if(request.text && botRegexSC.test(request.text)) {
-    this.res.writeHead(200);
-    
-    postMessage("http://daddyleagues.com/mnl/team/"+request.text.substring(5,8)+"/schedule");
-    this.res.end();
-  }
-   else if(request.text && botRegexDDL.test(request.text)) {
-    this.res.writeHead(200);
-    //postMessage("http://www.daddyleagues.com/maddenrating?name=&position=all&team="+request.text.substring(5,8));
-    postMessage("http://daddyleagues.com/mnl/team/"+request.text.substring(5,8)+"/depthchart");
-    this.res.end();
-   }
   else {
     console.log("don't care");
     this.res.writeHead(200);
