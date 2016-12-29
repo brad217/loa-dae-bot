@@ -19,11 +19,11 @@ function respond() {
     postMessage("https://i.groupme.com/1440x1332.png.39bc8567cc554629b13d1507ae2c7087.large");
     this.res.end();
   } 
-  else if(request.text && botRegexDa.test(request.text)) {
+   else if(request.text && botRegexDa.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://i.groupme.com/720x1280.png.eeb1fb59eb6c4763a84f5da152d573b8.large"); 
+    postMessage("https://i.groupme.com/720x1280.png.eeb1fb59eb6c4763a84f5da152d573b8.large");
     this.res.end();
-  }
+   }
   else if(request.text && botRegexDL.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://amfl.freeforums.org/league-rules-t3.html");
