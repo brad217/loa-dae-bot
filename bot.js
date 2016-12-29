@@ -16,7 +16,7 @@ function respond() {
   }
   else if(request.text && botRegex4d.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://i.groupme.com/1440x1332.png.39bc8567cc554629b13d1507ae2c7087.large");
+    postMessage("https://i.groupme.com/1440x747.png.ec41361b9bef44fe81620c7a482c823b");
     this.res.end();
   } 
    else if(request.text && botRegexDa.test(request.text)) {
