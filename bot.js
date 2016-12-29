@@ -26,7 +26,7 @@ function respond() {
   }
   else if(request.text && botRegexDon.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://i.groupme.com/480x446.gif.296a09bc8154451580a2250f5e6968af");
+    postMessage("https://media0.giphy.com/media/26tknCqiJrBQG6bxC/200_s.gif");
     this.res.end();
   }
   else if(request.text && botRegexTw.test(request.text)) {
