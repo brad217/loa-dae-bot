@@ -5,7 +5,8 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/cool guy/; botRegexDa = /^\/dae/; botRegex4d = /^\/4th/; botRegexDon = /^\/correct/; 
+      botRegex = /^\/cool guy/; botRegexDa = /^\/dae/; botRegex4d = /^\/4th/; botRegexDon = /^\/correct/; botRegexNo = /^\/wrong/;
+      botRegexWat = /^\/what/; 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage(cool());
@@ -16,10 +17,21 @@ function respond() {
     postMessage("https://i.groupme.com/540x960.png.d946e263ad1e427f9cf739bcb626f78b");
     this.res.end();
    }
+  else if(request.text && botRegexNo.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://media.giphy.com/media/3oz8xLd9DJq2l2VFtu/giphy.gif");
+    this.res.end();
+  }
+  else if(request.text && botRegexWat.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://media2.giphy.com/media/3o72F8t9TDi2xVnxOE/giphy.gif");
+    this.res.end();
+  }
   else if(request.text && botRegexDon.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://media.giphy.com/media/26tknCqiJrBQG6bxC/giphy.gif");
     this.res.end();
+    
   }
   else {
     console.log("don't care");
