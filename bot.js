@@ -18,7 +18,7 @@ function respond() {
    }
   else if(request.text && botRegexDon.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://i.groupme.com/480x446.gif.86ec7649965f4ce4881eaa66814b6a9f");
+    postMessage("https://media.giphy.com/media/26tknCqiJrBQG6bxC/giphy.gif");
     this.res.end();
   }
   else {
