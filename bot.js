@@ -6,7 +6,7 @@ var botID = process.env.BOT_ID;
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/cool guy/; botRegexDa = /^\/dae/; botRegex4d = /^\/4th/; botRegexDon = /^\/correct/; botRegexNo = /^\/wrong/;
-      botRegexWat = /^\/what/; botRegexDeal = /^\/notabigdeal/; botRegexLit = /^\/litty/; botRegexPly = /^\/playoffs/; 
+      botRegexWat = /^\/what/; botRegexDeal = /^\/notabigdeal/; botRegexLit = /^\/litty/; botRegexPly = /^\/playoffs/; botRegexJsh/ = /^\/Josh/;
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage(cool());
@@ -35,6 +35,11 @@ function respond() {
   else if(request.text && botRegexWat.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://media2.giphy.com/media/3o72F8t9TDi2xVnxOE/giphy.gif");
+    this.res.end();
+  }
+  else if(request.text && botRegexJsh.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://i.groupme.com/375x666.png.80ba58e665534ffb8e2e1fc2054d1e31");
     this.res.end();
   }
   else if(request.text && botRegexPly.test(request.text)) {
