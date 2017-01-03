@@ -7,7 +7,7 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/cool guy/; botRegexDa = /^\/dae/; botRegex4d = /^\/4th/; botRegexDon = /^\/correct/; botRegexNo = /^\/wrong/;
       botRegexWat = /^\/what/; botRegexDeal = /^\/notabigdeal/; botRegexLit = /^\/litty/; botRegexPly = /^\/playoffs/; 
-      botRegexJsh = /^\/josh/; botRegexZk = /^\/zeke/; botRegexTw = /^\/21/;
+      botRegexJsh = /^\/josh/; botRegexZk = /^\/zeke/; botRegexTw = /^\/21/; botRegexBed = /^\/bedtime/; botRegexSick = /^\/imsick/; 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage(cool());
@@ -21,6 +21,16 @@ function respond() {
   else if(request.text && botRegexZk.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://i.groupme.com/960x540.gif.377ae8a3a94d4abab13e693196767cd3");
+    this.res.end();
+  }
+  else if(request.text && botRegexBed.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://i.groupme.com/200x150.gif.46eff841d47041328d46f275c5a9041c");
+    this.res.end();
+  }
+  else if(request.text && botRegexSick.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://i.groupme.com/200x145.gif.cfa75d125791467a9025dd6edcb30dfc");
     this.res.end();
   }
   else if(request.text && botRegexTw.test(request.text)) {
