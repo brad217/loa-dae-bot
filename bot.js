@@ -8,7 +8,8 @@ function respond() {
       botRegex = /^\/cool guy/; botRegexDa = /^\/dae/; botRegex4d = /^\/4th/; botRegexDon = /^\/correct/; botRegexNo = /^\/wrong/;
       botRegexWat = /^\/what/; botRegexDeal = /^\/notabigdeal/; botRegexLit = /^\/litty/; botRegexPly = /^\/playoffs/; 
       botRegexJsh = /^\/josh/; botRegexZk = /^\/zeke/; botRegexTw = /^\/21/; botRegexBed = /^\/bedtime/; botRegexSick = /^\/imsick/;
-      botRegexJet = /^\/jetboy/; botRegexBull = /^\/bullsboy/; botRegexTrg = /^\/triggered/; botRegexRej = /^\/rejected/; 
+      botRegexJet = /^\/jetboy/; botRegexBull = /^\/bullsboy/; botRegexTrg = /^\/triggered/; botRegexRej = /^\/rejected/; botRegexWtf = /^\/wtf/;
+  
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage(cool());
