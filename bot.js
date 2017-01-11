@@ -24,6 +24,11 @@ function respond() {
     postMessage("https://i.groupme.com/371x209.gif.9a488370b81243b48b1c8b20f8630a6d");
     this.res.end();
   }
+    else if(request.text && botRegexWtf.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://i.groupme.com/702x1024.jpeg.73e6c4f935e84f5eabc1bb9cb987f7f0");
+    this.res.end();
+    }
   else if(request.text && botRegexRej.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://i.groupme.com/550x303.gif.eb28e3040fdb4496b8e63fb1c5d2a200");
