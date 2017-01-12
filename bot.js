@@ -5,7 +5,10 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/cool guy/; botRegexDa = /^\/dae/; botRegexPrz = /^\/pmilly/;
+      botRegex = /^\/cool guy/; botRegexDa = /^\/dae/; botRegexPrz = /^\/pmilly/; botRegexDon = /^\/correct/; botRegexNo = /^\/wrong/;
+      botRegexWat = /^\/what/; botRegexDeal = /^\/notabigdeal/; /^\/notabigdeal/; botRegexLit = /^\/litty/; botRegexPly = /^\/playoffs/;
+      botRegexZk = /^\/zeke/; botRegexBed = /^\/bedtime/; botRegexJet = /^\/jetboy/; botRegexBull = /^\/bullsboy/; botRegexTrg = /^\/triggered/;
+      botRegexRej = /^\/rejected/;
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage(cool());
@@ -16,11 +19,72 @@ function respond() {
     postMessage("https://i.groupme.com/540x960.png.d946e263ad1e427f9cf739bcb626f78b");
     this.res.end();
   }
-   else if(request.text && botRegexPrz.test(request.text)) {
+   else if(request.text && botRegexNo.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://media.giphy.com/media/3oz8xLd9DJq2l2VFtu/giphy.gif");
+    this.res.end();
+  }
+  else if(request.text && botRegexRej.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://i.groupme.com/550x303.gif.eb28e3040fdb4496b8e63fb1c5d2a200");
+    this.res.end();
+  }
+  else if(request.text && botRegexBed.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://i.groupme.com/200x150.gif.46eff841d47041328d46f275c5a9041c");
+    this.res.end();
+  }
+  else if(request.text && botRegexTrg.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://i.groupme.com/371x209.gif.9a488370b81243b48b1c8b20f8630a6d");
+    this.res.end();
+  }
+  else if(request.text && botRegexBull.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://i.groupme.com/112x200.gif.1aa64b691da341e3bbf4e0d52ad66a21");
+    this.res.end();
+  }
+  else if(request.text && botRegexJet.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://i.groupme.com/200x148.gif.cf9eeb40e4034d7e9fb95e4365a6f8d4");
+    this.res.end();
+  }
+  else if(request.text && botRegexZk.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://i.groupme.com/960x540.gif.377ae8a3a94d4abab13e693196767cd3");
+    this.res.end();
+  }
+  else if(request.text && botRegexPly.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://i.groupme.com/258x222.gif.e5ceb901c9b04b6190a74eea635fe78b");
+    this.res.end();
+  }
+  else if(request.text && botRegexDeal.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("issa big deal");
+    this.res.end();
+  }
+  else if(request.text && botRegexWat.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://media2.giphy.com/media/3o72F8t9TDi2xVnxOE/giphy.gif");
+    this.res.end();
+  }
+  else if(request.text && botRegexLit.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://i.groupme.com/310x233.gif.f8466181bf184a1a964ef0ee9ba5a604");
+    this.res.end();
+  }
+  else if(request.text && botRegexDon.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://media.giphy.com/media/26tknCqiJrBQG6bxC/giphy.gif");
+    this.res.end();
+  }
+  else if(request.text && botRegexPrz.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://i.groupme.com/1280x687.png.add1b915c55844638d3b4b350b01949d");
     this.res.end();
-    }
+   }
+  
    else {
     console.log("don't care");
     this.res.writeHead(200);
