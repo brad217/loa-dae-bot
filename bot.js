@@ -9,7 +9,7 @@ function respond() {
       botRegexWat = /^\/what/; botRegexDeal = /^\/notabigdeal/; /^\/notabigdeal/; botRegexLit = /^\/litty/; botRegexPly = /^\/playoffs/;
       botRegexZk = /^\/zeke/; botRegexBed = /^\/bedtime/; botRegexJet = /^\/jetboy/; botRegexBull = /^\/bullsboy/; botRegexTrg = /^\/triggered/;
       botRegexRej = /^\/rejected/; botRegexTw = /^\/21/; botRegexRegr = /^\/regression/; botRegexPos = /^\/positions/;
-      botRegexCon = /^\/contracts/; 
+      botRegexCon = /^\/contracts/; botRegexOff = /^\/offseason/; 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage(cool());
@@ -25,9 +25,14 @@ function respond() {
     postMessage("https://i.groupme.com/465x565.png.2f73d91296a44972b5770a3b6e3a8ac1.large");
     this.res.end();
   }
-   else if(request.text && botRegexNo.test(request.text)) {
+  else if(request.text && botRegexNo.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://media.giphy.com/media/3oz8xLd9DJq2l2VFtu/giphy.gif");
+    this.res.end();
+  }
+   else if(request.text && botRegexOff.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://i.groupme.com/576x346.png.6fc465f9eee145ecb26a960103a0caf9");
     this.res.end();
   }
   else if(request.text && botRegexTw.test(request.text)) {
