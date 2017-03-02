@@ -32,7 +32,7 @@ function respond() {
   }
    else if(request.text && botRegexOff.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://i.groupme.com/576x346.png.6fc465f9eee145ecb26a960103a0caf9");
+    postMessage("https://i.groupme.com/576x346.png.52711a67ee0249d48a1597d1109f5003");
     this.res.end();
   }
   else if(request.text && botRegexTw.test(request.text)) {
