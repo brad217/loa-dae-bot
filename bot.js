@@ -10,7 +10,7 @@ function respond() {
       botRegexZk = /^\/zeke/; botRegexBed = /^\/bedtime/; botRegexJet = /^\/jetboy/; botRegexBull = /^\/bullsboy/; botRegexTrg = /^\/triggered/;
       botRegexRej = /^\/rejected/; botRegexTw = /^\/21/; botRegexRegr = /^\/regression/; botRegexPos = /^\/positions/;
       botRegexCon = /^\/contracts/; botRegexOff = /^\/offseason/; botRegexRelo = /^\/relocation/; botRegexSail = /^\/sail/;
-      botRegexFour = /^\/4th/; 
+      botRegexFour = /^\/4th/; botRegexWtf = /^\/wtf/;
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage(cool());
@@ -29,6 +29,11 @@ function respond() {
   else if(request.text && botRegexFour.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://i.groupme.com/657x217.png.e2c156a853e94178b1548bc87e637731");
+    this.res.end();
+  }
+  else if(request.text && botRegexWtf.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://i.groupme.com/272x480.gif.4c76b1febbbf465bac8ed5a1102005bc");
     this.res.end();
   }
   else if(request.text && botRegexSail.test(request.text)) {
