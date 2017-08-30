@@ -10,7 +10,7 @@ function respond() {
       botRegexZk = /^\/zeke/; botRegexBed = /^\/bedtime/; botRegexJet = /^\/jetboy/; botRegexBull = /^\/bullsboy/; botRegexTrg = /^\/triggered/;
       botRegexRej = /^\/rejected/; botRegexTw = /^\/21/; botRegexRegr = /^\/regression/; botRegexPos = /^\/positions/;
       botRegexCon = /^\/contracts/; botRegexOff = /^\/offseason/; botRegexRelo = /^\/relocation/; botRegexSail = /^\/sail/;
-      botRegexFour = /^\/4th/; botRegexWtf = /^\/wtf/; botRegexDrft = /^\/draft/; botRegesRule = /^\/rules/;
+      botRegexFour = /^\/4th/; botRegexWtf = /^\/wtf/; botRegexDrft = /^\/draft/; botRegexRule = /^\/rules/;
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage(cool());
