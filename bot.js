@@ -33,7 +33,7 @@ function respond() {
   }
   else if(request.text && botRegexDrft.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://i.groupme.com/146x524.png.bb19a16c74ef429e93a69161a491801d.large");
+    postMessage("https://beta.doodle.com/poll/t4eaq66xmas6msae");
     this.res.end();
   }
   else if(request.text && botRegexFour.test(request.text)) {
