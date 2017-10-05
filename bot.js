@@ -11,6 +11,7 @@ function respond() {
       botRegexRej = /^\/rejected/; botRegexTw = /^\/21/; botRegexRegr = /^\/regression/; botRegexPos = /^\/positions/;
       botRegexCon = /^\/contracts/; botRegexOff = /^\/offseason/; botRegexRelo = /^\/relocation/; botRegexSail = /^\/sail/;
       botRegexFour = /^\/4th/; botRegexWtf = /^\/wtf/; botRegexDrft = /^\/draft/; botRegexRule = /^\/rules/;
+      botRegexTrde = /^\/trade/;
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage(cool());
@@ -24,6 +25,11 @@ function respond() {
   else if(request.text && botRegexRegr.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://i.groupme.com/465x565.png.2f73d91296a44972b5770a3b6e3a8ac1.large");
+    this.res.end();
+  }
+  else if(request.text && botRegexTrde.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://docs.google.com/forms/d/e/1FAIpQLSdrbe5iBRaBC7EWoodVm8z6285-dG2EdHXAOMOgz8md8T1jwQ/viewform");
     this.res.end();
   }
   else if(request.text && botRegexRule.test(request.text)) {
