@@ -11,7 +11,10 @@ function respond() {
       botRegexRej = /^\/rejected/; botRegexTw = /^\/21/; botRegexRegr = /^\/regression/; botRegexPos = /^\/positions/;
       botRegexCon = /^\/contracts/; botRegexOff = /^\/offseason/; botRegexRelo = /^\/relocation/; botRegexSail = /^\/sail/;
       botRegexFour = /^\/4th/; botRegexWtf = /^\/wtf/; botRegexDrft = /^\/draft/; botRegexRule = /^\/rules/;
-      botRegexTrde = /^\/trade/;
+      botRegexTrde = /^\/trade/; botRegexScd = /^\/sdl/i; botRegexPdl = /^\/pdl/i;
+  var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
+                ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
+                "MIA","BUF","SF","WAS","NYJ","TB"]
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage(cool());
@@ -20,6 +23,20 @@ function respond() {
    else if(request.text && botRegexDa.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://i.groupme.com/540x960.png.d946e263ad1e427f9cf739bcb626f78b");
+    this.res.end();
+  }
+  else if(request.text && botRegexScd.test(request.text)) {
+    this.res.writeHead(200);
+    
+    postMessage("http://daddyleagues.com/loa/team/"+request.text.substring(5,8)+"/schedule");
+    this.res.end();
+  }
+  else if(request.text && botRegexPdl.test(request.text)) {
+    this.res.writeHead(200);
+    var req = request.text.substring(5,request.text.length);
+    var rep = req.replace(/ /,"+");
+    postMessage("http://daddyleagues.com/nml18/players?name="+rep+"&position=all&team=all");
+    
     this.res.end();
   }
   else if(request.text && botRegexRegr.test(request.text)) {
