@@ -101,7 +101,7 @@ function respond() {
   }
   else if(request.text && botRegexPos.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://i.groupme.com/650x292.png.81802bd323ee4104a6495f22fb545854");
+    postMessage("https://i.groupme.com/1294x558.png.067d5adf41a8498c9d57745d6c188230");
     this.res.end();
   }
   else if(request.text && botRegexBed.test(request.text)) {
