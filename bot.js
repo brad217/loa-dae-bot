@@ -10,7 +10,7 @@ function respond() {
       botRegexZk = /^\/zeke/; botRegexBed = /^\/bedtime/; botRegexJet = /^\/jetboy/; botRegexBull = /^\/bullsboy/; botRegexTrg = /^\/triggered/;
       botRegexRej = /^\/rejected/; botRegexTw = /^\/21/; botRegexRegr = /^\/regression/; botRegexPos = /^\/positions/;
       botRegexCon = /^\/contracts/; botRegexOff = /^\/offseason/; botRegexRelo = /^\/relocation/; botRegexSail = /^\/sail/;
-      botRegexFour = /^\/4th/; botRegexWtf = /^\/wtf/; botRegexDrft = /^\/draft/; botRegexRule = /^\/rules/;
+      botRegexFour = /^\/4th/; botRegexWtf = /^\/wtf/; botRegexDrft = /^\/draft/; botRegexRule = /^\/rules/; botRegexDig = /^\/digest/;
       botRegexTrde = /^\/trade/; botRegexScd = /^\/sdl/i; botRegexPdl = /^\/pdl/i;
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
@@ -42,6 +42,11 @@ function respond() {
   else if(request.text && botRegexRegr.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://i.groupme.com/465x565.png.2f73d91296a44972b5770a3b6e3a8ac1.large");
+    this.res.end();
+  }
+  else if(request.text && botRegexDig.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://imgur.com/a/tDS8n");
     this.res.end();
   }
   else if(request.text && botRegexTrde.test(request.text)) {
