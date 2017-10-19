@@ -8,10 +8,10 @@ function respond() {
       botRegex = /^\/cool guy/; botRegexDa = /^\/dae/; botRegexPrz = /^\/pmilly/; botRegexDon = /^\/correct/; botRegexNo = /^\/wrong/;
       botRegexWat = /^\/what/; botRegexDeal = /^\/notabigdeal/; /^\/notabigdeal/; botRegexLit = /^\/litty/; botRegexPly = /^\/playoffs/;
       botRegexZk = /^\/zeke/; botRegexBed = /^\/bedtime/; botRegexJet = /^\/jetboy/; botRegexBull = /^\/bullsboy/; botRegexTrg = /^\/triggered/;
-      botRegexRej = /^\/rejected/; botRegexTw1 = /^\/21/; botRegexRegr = /^\/regression/; botRegexPos = /^\/positions/;
+      botRegexRej = /^\/rejected/; botRegexTw = /^\/21/; botRegexRegr = /^\/regression/; botRegexPos = /^\/positions/;
       botRegexCon = /^\/contracts/; botRegexOff = /^\/offseason/; botRegexRelo = /^\/relocation/; botRegexSail = /^\/sail/;
       botRegexFour = /^\/4th/; botRegexWtf = /^\/wtf/; botRegexDrft = /^\/draft/; botRegexRule = /^\/rules/; botRegexDig = /^\/digest/;
-      botRegexTrde = /^\/trade/; botRegexScd = /^\/sdl/i; botRegexPdl = /^\/pdl/i; botRegexTw = /^\/twitch/i; botRegexTrdsht = /^\/tradesheet;
+      botRegexTrde = /^\/trade/; botRegexScd = /^\/sdl/i; botRegexPdl = /^\/pdl/i; botRegexTw = /^\/twitch/i;
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
@@ -59,11 +59,6 @@ function respond() {
     postMessage("https://docs.google.com/forms/d/e/1FAIpQLSdrbe5iBRaBC7EWoodVm8z6285-dG2EdHXAOMOgz8md8T1jwQ/viewform");
     this.res.end();
   }
-  else if(request.text && botRegexTrdsht.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("https://docs.google.com/spreadsheets/d/18gGeVM0ZuciCPS0n3IRtfEPUHXOHcH2ENDCQ8nk-McY/edit#gid=2076174372");
-    this.res.end();
-  }
   else if(request.text && botRegexRule.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://daddyleagues.com/loa/rules");
@@ -99,7 +94,7 @@ function respond() {
     postMessage("https://i.groupme.com/576x346.png.52711a67ee0249d48a1597d1109f5003");
     this.res.end();
   }
-  else if(request.text && botRegexTw1.test(request.text)) {
+  else if(request.text && botRegexTw.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://i.groupme.com/669x475.jpeg.0e19247fd8214658b78863efe178e7c0");
     this.res.end();
