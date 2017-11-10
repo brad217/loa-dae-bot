@@ -71,7 +71,7 @@ function respond() {
   }
   else if(request.text && botRegexDrft.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://i.groupme.com/630x344.png.a113f755e7ea4454bf04130294bbea81");
+    postMessage("https://doodle.com/poll/te8v374ck3nkf2im");
     this.res.end();
   }
   else if(request.text && botRegexFour.test(request.text)) {
