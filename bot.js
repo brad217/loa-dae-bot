@@ -11,7 +11,7 @@ function respond() {
       botRegexRej = /^\/rejected/; botRegexRegr = /^\/regression/; botRegexPos = /^\/positions/; botRegexCon = /^\/contracts/; 
       botRegexOff = /^\/offseason/; botRegexRelo = /^\/relocation/; botRegexSail = /^\/sail/; botRegexFour = /^\/4th/; 
       botRegexWtf = /^\/wtf/; botRegexDrft = /^\/draft/; botRegexRule = /^\/rules/; botRegexDig = /^\/digest/; botRegexTrde = /^\/trade/; 
-      botRegexScd = /^\/sdl/i; botRegexPdl = /^\/pdl/i; botRegexTw = /^\/twitch/i; botRegexSht = /^\/votes/;
+      botRegexScd = /^\/sdl/i; botRegexPdl = /^\/pdl/i; botRegexTw = /^\/twitch/i; botRegexSht = /^\/votes/; botRegexCheez = /^\/cheese/;
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
@@ -42,6 +42,11 @@ function respond() {
   else if(request.text && botRegexRegr.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://i.groupme.com/465x565.png.2f73d91296a44972b5770a3b6e3a8ac1.large");
+    this.res.end();
+  }
+  else if(request.text && botRegexCheez.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://docs.google.com/spreadsheets/d/1YLgfUjrSfgi3zWBIlHPM8RE-aoVy_w6Bv9P-H5uZk4k/edit?usp=sharing");
     this.res.end();
   }
   else if(request.text && botRegexTw.test(request.text)) {
