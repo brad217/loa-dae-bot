@@ -56,7 +56,7 @@ function respond() {
   }
   else if(request.text && botRegexDig.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://imgur.com/a/zMVbF");
+    postMessage("https://imgur.com/a/XV9t5");
     this.res.end();
   }
   else if(request.text && botRegexTrde.test(request.text)) {
