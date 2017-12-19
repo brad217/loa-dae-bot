@@ -81,7 +81,7 @@ function respond() {
   }
   else if(request.text && botRegexDrft.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://doodle.com/poll/te8v374ck3nkf2im");
+    postMessage("https://doodle.com/poll/pw74pt7t9bik9m9g");
     this.res.end();
   }
   else if(request.text && botRegexFour.test(request.text)) {
