@@ -81,7 +81,7 @@ function respond() {
   }
   else if(request.text && botRegexDrft.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://doodle.com/poll/pw74pt7t9bik9m9g");
+    postMessage("https://i.groupme.com/300x300.png.997d95e811a54d4b875f4b1f57212d83");
     this.res.end();
   }
   else if(request.text && botRegexFour.test(request.text)) {
