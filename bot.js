@@ -46,7 +46,7 @@ function respond() {
   }
   else if(request.text && botRegexRule.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://docs.Google.com/document/d/1VHzErq18uZF1moh6EUBDrRIOyYbJTUi4Iw-6hr7-sw8/edit?usp=sharing");
+    postMessage("https://docs.google.com/document/d/1VHzErq18uZF1moh6EUBDrRIOyYbJTUi4Iw-6hr7-sw8/edit?usp=sharing");
     this.res.end();
   }
   else if(request.text && botRegexCheez.test(request.text)) {
