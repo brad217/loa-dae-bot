@@ -5,7 +5,7 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/cool guy/; botRegexDa = /^\/dae/; botRegexPrz = /^\/pmilly/; botRegexDon = /^\/correct/; botRegexNo = /^\/wrong/;
+      botRegex = /^\/cool guy/; botRegexDa = /^\/dae/; botRegexPrz = /^\/pmilly/; botRegexDon = /^\/correct/; botRegexNo = /^\/wrong/; botRegexHog = /^\/hog/;
       botRegexWat = /^\/what/; botRegexDeal = /^\/notabigdeal/; /^\/notabigdeal/; botRegexLit = /^\/litty/; botRegexPly = /^\/playoffs/;
       botRegexZk = /^\/zeke/; botRegexBed = /^\/bedtime/; botRegexJet = /^\/jetboy/; botRegexBull = /^\/bullsboy/; botRegexTrg = /^\/triggered/;
       botRegexRej = /^\/rejected/; botRegexRegr = /^\/regression/; botRegexPos = /^\/positions/; botRegexCon = /^\/contracts/; 
@@ -29,6 +29,11 @@ function respond() {
   else if(request.text && botRegexJeff.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://media.giphy.com/media/xUOwFTxy6g6dFCbLxu/giphy.gif");
+    this.res.end();
+  }
+  else if(request.text && botRegexHog.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://youtu.be/f6J-5B9sk3E");
     this.res.end();
   }
   else if(request.text && botRegexScd.test(request.text)) {
