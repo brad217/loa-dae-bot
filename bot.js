@@ -92,7 +92,7 @@ function respond() {
   }
   else if(request.text && botRegexDrft.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://doodle.com/poll/6753mwzznhakbis8");
+    postMessage("https://docs.google.com/spreadsheets/d/1z_4WQtiaa-MbZaeWo2-w6c2AL0r9N_7pllRucIhfo4Y/edit?usp=sharing");
     this.res.end();
   }
   else if(request.text && botRegexFour.test(request.text)) {
